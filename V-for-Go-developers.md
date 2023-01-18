@@ -73,7 +73,6 @@ for _, num := range numbers {
     even = append(even, num)
   }
 }
-
 </pre>
 </td>
 <td valign="top">
@@ -89,12 +88,11 @@ even := numbers.filter(it % 2 == 0)
 <pre>
 contains := false
 for _, num := range numbers {
-        if num == x {
-            contains = true
-            break
-        }
-    }
-
+  if num == x {
+    contains = true
+    break
+  }
+}
 </pre>
 </td>
 <td valign="top">
@@ -112,13 +110,13 @@ contains := x in numbers
 <td>
 <pre>
 import (
-    "io/ioutil"
-    "log"
+  "io/ioutil"
+  "log"
 )
 b, err := ioutil.ReadFile(path)
 if err != nil {
-        log.Println(err)
-        return
+  log.Println(err)
+  return
 }
 text := string(b)
 </pre>
@@ -126,7 +124,7 @@ text := string(b)
 <td valign="top">
 <pre>
 import os
-text := os.read_file(path)or{
+text := os.read_file(path) or {
   eprintln(err)
   return
 }
@@ -141,19 +139,19 @@ text := os.read_file(path)or{
 <pre>
 package greeter_test
 import (
-    "testing"
+  "testing"
 )
 func TestHello(t *testing.T) {
-    if Hello() != "Hello" {
-        t.Fatalf("Hello() failed")
-    }
+  if Hello() != "Hello" {
+    t.Fatalf("Hello() failed")
+  }
 }
 </pre>
 </td>
 <td valign="top">
 <pre>
 fn test_hello() {
-    assert hello() == 'hello'
+  assert hello() == 'hello'
 }
 </pre>
 </td>
